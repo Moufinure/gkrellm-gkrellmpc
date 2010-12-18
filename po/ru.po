@@ -1,0 +1,218 @@
+# Russian translations for gkrellmpc package
+# Copyright (C) 2005 drF_ckoff <dfo@antex.ru>
+# This file is distributed under the same license as the gkrellmpc package.
+# Sergey Pinaev <dfo@antex.ru>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gkrellmpc 0.1_beta10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-03-05 17:18+0300\n"
+"PO-Revision-Date: 2005-03-05 15:52+0300\n"
+"Last-Translator: Sergey Pinaev <dfo@antex.ru>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=KOI8-R\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../addlist.c:48
+msgid "MPD ADD SONGS"
+msgstr "Добавление песен"
+
+#: ../addlist.c:110
+msgid "Name"
+msgstr "Имя"
+
+#: ../addlist.c:248
+msgid "URL could not be added"
+msgstr "URL не может быть добавлен"
+
+#: ../conf.c:45
+msgid "Configuration"
+msgstr "Настрока"
+
+#: ../conf.c:47
+msgid "MPD hostname:"
+msgstr "Адрес сервера MPD:"
+
+#: ../conf.c:53
+msgid "MPD port:"
+msgstr "Порт сервера MPD:"
+
+#: ../conf.c:59
+msgid "Scrolling speed:"
+msgstr "Скорость прокрутки:"
+
+#: ../conf.c:63
+msgid "Mouse wheel:"
+msgstr "Колесо мыши:"
+
+#: ../conf.c:65
+msgid "Adjusts volume"
+msgstr "Регулирует громкость"
+
+#: ../conf.c:66
+msgid "Adjusts position"
+msgstr "Перемотка"
+
+#: ../conf.c:70
+msgid "Mouse wheel adjustment:"
+msgstr "Подстройка колеса мыши:"
+
+#: ../conf.c:74
+msgid "Right click:"
+msgstr "Правая кнопка мыши:"
+
+#: ../conf.c:76
+msgid "Opens configuration"
+msgstr "Открывает окно настроек"
+
+#: ../conf.c:77
+msgid "Opens playlist"
+msgstr "Открывает список воспроизведения"
+
+#: ../conf.c:81
+msgid "Middle click:"
+msgstr "Средняя кнопка мыши:"
+
+#: ../conf.c:83
+msgid "Pauses"
+msgstr "Пауза"
+
+#: ../conf.c:84
+msgid "Simulates drop from clipboard"
+msgstr "Получить содержимое буфера обмена"
+
+#: ../conf.c:88
+msgid "Drag-drop URL into panel will:"
+msgstr "\"Притаскивание\" URL на панель:"
+
+#: ../conf.c:90
+msgid "Clear playlist, add URL and play it"
+msgstr "Очищает список воспроизведения, добавляет URL и воспроизводит его"
+
+#: ../conf.c:91
+msgid "Add URL and play it"
+msgstr "Добавляет URL и воспроизводит его"
+
+#: ../conf.c:92
+msgid "Just add URL"
+msgstr ""
+
+#: ../conf.c:100
+msgid "Help"
+msgstr "Помощь"
+
+#: ../conf.c:102
+msgid ""
+"For help please visit the support forums at the MPD web site:\n"
+"http://www.musicpd.org\n"
+"\n"
+"Alternatively email the author at webmaster@topfx.com"
+msgstr ""
+"Для получения помощи посетите форумы на странице MPD:\n"
+"http://www.musicpd.org\n"
+"Или напишите письмо автору по адресу webmaster@topfx.com"
+
+#: ../conf.c:106
+#, c-format
+msgid "About %s"
+msgstr "О %s"
+
+#: ../conf.c:110
+#, c-format
+msgid ""
+"Plugin version %s\n"
+"\n"
+"Written by Mina Naguib <webmaster@topfx.com>\n"
+"http://www.topfx.com\n"
+"\n"
+"Copyright (C) 2004-2005 Mina Naguib\n"
+"Released under the GPL license version 2"
+msgstr ""
+"Плагин версии %s\n"
+"\n"
+"\n"
+"Написан Mina Naguib <webmaster@topfx.com>\n"
+"http://www.topfx.com\n"
+"\n"
+"Copyright (C) 2004-2005 Mina Naguib\n"
+"Распространяется под лицензией GPL версии 2"
+
+#: ../gkrellmpc.c:77 ../mpd.c:76
+msgid "MPD"
+msgstr "MPD"
+
+#: ../gkrellmpc.c:78
+msgid "Not connected"
+msgstr "Не подключен"
+
+#: ../gkrellmpc.c:155 ../gkrellmpc.c:156
+msgid "Vol:"
+msgstr "Ур:"
+
+#: ../gkrellmpc.c:169 ../gkrellmpc.c:170
+msgid "Pos:"
+msgstr "Поз:"
+
+#: ../gkrellmpc.c:460 ../mpd.c:95
+msgid "NO MPD"
+msgstr "НЕТ MPD"
+
+#: ../gkrellmpc.c:462
+msgid "MPD is not running"
+msgstr "MPD не запущен"
+
+#: ../gkrellmpc.c:465
+msgid "MPD ERROR"
+msgstr "Ошибка MPD"
+
+#: ../gkrellmpc.c:468
+msgid "Error communicating with MPD"
+msgstr "Ошибка при разговоре с MPD"
+
+#: ../gkrellmpc.c:511
+#, c-format
+msgid ""
+"Artist: %s\n"
+"Title: %s\n"
+"File: %s"
+msgstr ""
+"Исполнитель: %s\n"
+"Название: %s\n"
+"Файл: %s"
+
+#: ../gkrellmpc.c:515
+msgid "MPD STOPPED"
+msgstr "MPD остановлен"
+
+#: ../gkrellmpc.c:524
+#, c-format
+msgid "MPD %02d:%02d"
+msgstr "MPD %02d:%02d"
+
+#: ../gkrellmpc.c:527
+msgid "MPD PAUSED"
+msgstr "MPD приостановлен"
+
+#: ../playlist.c:45
+msgid "MPD PLAYLIST"
+msgstr "Список проигрывания MPD"
+
+#: ../playlist.c:85
+msgid "Artist"
+msgstr "Исполнитель"
+
+#: ../playlist.c:97
+msgid "Title"
+msgstr "Название"
+
+#: ../url.c:236
+#, c-format
+msgid "URL (%s) could not be added"
+msgstr "URL (%s) не может быть добавлен"
+
+#~ msgid "Plugin version "
+#~ msgstr "Плагин версии "

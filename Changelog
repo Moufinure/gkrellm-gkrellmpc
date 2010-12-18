@@ -1,0 +1,61 @@
+$Header: /cvsroot/gkrellmpc/Changelog,v 1.14 2005/03/06 02:29:07 mina Exp $
+
+Changelog for GKrellMPC
+
+0.1_beta10: 2005-03-04
+	Patch from Sergey Pinaev <dfo@antex.ru>: Sets wmname/wmclass for "playlist" and "add" windows, so these windows will have decoration (title/buttons)
+	Patch from Sergey Pinaev <dfo@antex.ru>: Changes horizontal scrollbar policy for these windows to "automatic". users can have REALY long song names in playlists.
+	Patch from Sergey Pinaev <dfo@antex.ru>: Adds "position" slider to show/set current song position.
+	Added configurable option to dictate whether mouse wheel adjusts volume or position
+	Patch from Sergey Pinaev <dfo@antex.ru>: Adds "tooltip" showing "artist", "title" and "file" information about current playing song.
+	Patch from Sergey Pinaev <dfo@antex.ru>: Adds localization and Russian translation
+	Bugfix playlist/addlist height not remembered.  Now also remembers width
+
+0.1_beta9: 2005-01-05
+	Incremental search in the playlist and "Add song" windows now works
+	Fixed panel layout issues that made components overlap under certain fonts/themes
+
+0.1_beta8: Released on 2005-01-03
+	Added support for drag-and-drop - You can now drag a URL onto the panel
+	Added support for pasting - You can now paste a URL (via middle-click) onto the panel
+	Adding a bad URL in the "Add" dialog now gives an error message
+	Made action taken on middle-click configurable
+	Configuration screen made better looking
+	"Add" window gets destroyed and playlist window refreshes if re-connect to a new server
+	Bugfix "Add URL" allowing adding to playlist bad URLs
+
+0.1_beta7: Released on 2005-01-02
+	Added support for adding URLs - "does-the-right-thing" with respect to IceCast streams and PLS files
+	Panel now shows playing time
+	Song status (stopped, playing, paused) shown in panel label instead of prefixing scrolling song title
+
+0.1_beta6: Released on 2005-01-01
+	"Add" dialog implemented
+	Playlist window now has a "Remove" button
+	Playlist window now responds to expected keyboard events (such as Del or Esc)
+	Buttons now have icons
+
+0.1_beta5: Released on 2004-12-31
+	Pieces in the gkrellm panel are now positioned vertically relative to each other, not hard-coded offsets from the top.  This better accomodates custom fonts etc...
+	Several playlist bugfixes, including scrolling and remembering height
+	Compiler warning fixes
+
+0.1_beta4: Released on 2004-12-30
+	Playlist feature (minimal)
+	Huge internal code re-factorization and breakdown
+	New Makefile targets including a working "install" target
+
+0.1_beta3: Released on 2004-12-21
+	Configurable mouse wheel adjustment now allowed to go to 100
+	More real-time effect after applying configuration
+	Bugfix crash in certain scenarios when MPD returns empty fields
+
+0.1_beta2: Released on 2004-12-21
+	Configurable scrolling speed
+	New volume show/control krell with adjustable mouse wheel control amount
+	New mouse shortcuts to play/pause (middle-click) and open config (right-click)
+	Makefile now respects external CC and CFLAGS variables
+
+0.1_beta1: Released on 2004-12-18
+	Initial public release
+

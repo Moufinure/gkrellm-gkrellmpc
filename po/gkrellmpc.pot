@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-03-05 17:18+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../addlist.c:48
+msgid "MPD ADD SONGS"
+msgstr ""
+
+#: ../addlist.c:110
+msgid "Name"
+msgstr ""
+
+#: ../addlist.c:248
+msgid "URL could not be added"
+msgstr ""
+
+#: ../conf.c:45
+msgid "Configuration"
+msgstr ""
+
+#: ../conf.c:47
+msgid "MPD hostname:"
+msgstr ""
+
+#: ../conf.c:53
+msgid "MPD port:"
+msgstr ""
+
+#: ../conf.c:59
+msgid "Scrolling speed:"
+msgstr ""
+
+#: ../conf.c:63
+msgid "Mouse wheel:"
+msgstr ""
+
+#: ../conf.c:65
+msgid "Adjusts volume"
+msgstr ""
+
+#: ../conf.c:66
+msgid "Adjusts position"
+msgstr ""
+
+#: ../conf.c:70
+msgid "Mouse wheel adjustment:"
+msgstr ""
+
+#: ../conf.c:74
+msgid "Right click:"
+msgstr ""
+
+#: ../conf.c:76
+msgid "Opens configuration"
+msgstr ""
+
+#: ../conf.c:77
+msgid "Opens playlist"
+msgstr ""
+
+#: ../conf.c:81
+msgid "Middle click:"
+msgstr ""
+
+#: ../conf.c:83
+msgid "Pauses"
+msgstr ""
+
+#: ../conf.c:84
+msgid "Simulates drop from clipboard"
+msgstr ""
+
+#: ../conf.c:88
+msgid "Drag-drop URL into panel will:"
+msgstr ""
+
+#: ../conf.c:90
+msgid "Clear playlist, add URL and play it"
+msgstr ""
+
+#: ../conf.c:91
+msgid "Add URL and play it"
+msgstr ""
+
+#: ../conf.c:92
+msgid "Just add URL"
+msgstr ""
+
+#: ../conf.c:100
+msgid "Help"
+msgstr ""
+
+#: ../conf.c:102
+msgid ""
+"For help please visit the support forums at the MPD web site:\n"
+"http://www.musicpd.org\n"
+"\n"
+"Alternatively email the author at webmaster@topfx.com"
+msgstr ""
+
+#: ../conf.c:106
+#, c-format
+msgid "About %s"
+msgstr ""
+
+#: ../conf.c:110
+#, c-format
+msgid ""
+"Plugin version %s\n"
+"\n"
+"Written by Mina Naguib <webmaster@topfx.com>\n"
+"http://www.topfx.com\n"
+"\n"
+"Copyright (C) 2004-2005 Mina Naguib\n"
+"Released under the GPL license version 2"
+msgstr ""
+
+#: ../gkrellmpc.c:77 ../mpd.c:76
+msgid "MPD"
+msgstr ""
+
+#: ../gkrellmpc.c:78
+msgid "Not connected"
+msgstr ""
+
+#: ../gkrellmpc.c:155 ../gkrellmpc.c:156
+msgid "Vol:"
+msgstr ""
+
+#: ../gkrellmpc.c:169 ../gkrellmpc.c:170
+msgid "Pos:"
+msgstr ""
+
+#: ../gkrellmpc.c:460 ../mpd.c:95
+msgid "NO MPD"
+msgstr ""
+
+#: ../gkrellmpc.c:462
+msgid "MPD is not running"
+msgstr ""
+
+#: ../gkrellmpc.c:465
+msgid "MPD ERROR"
+msgstr ""
+
+#: ../gkrellmpc.c:468
+msgid "Error communicating with MPD"
+msgstr ""
+
+#: ../gkrellmpc.c:511
+#, c-format
+msgid ""
+"Artist: %s\n"
+"Title: %s\n"
+"File: %s"
+msgstr ""
+
+#: ../gkrellmpc.c:515
+msgid "MPD STOPPED"
+msgstr ""
+
+#: ../gkrellmpc.c:524
+#, c-format
+msgid "MPD %02d:%02d"
+msgstr ""
+
+#: ../gkrellmpc.c:527
+msgid "MPD PAUSED"
+msgstr ""
+
+#: ../playlist.c:45
+msgid "MPD PLAYLIST"
+msgstr ""
+
+#: ../playlist.c:85
+msgid "Artist"
+msgstr ""
+
+#: ../playlist.c:97
+msgid "Title"
+msgstr ""
+
+#: ../url.c:236
+#, c-format
+msgid "URL (%s) could not be added"
+msgstr ""
