@@ -1,5 +1,5 @@
-gkrellm-gkrellmpc (0.1~beta10-1) UNRELEASED; urgency=low
+gkrellm-gkrellmpc (0.1~beta10-1) experimental; urgency=low
 
   * Initial release (Closes: #607445)
 
- -- Andrey Rahmatullin <wrar@wrar.name>  Fri, 21 Oct 2010 18:53:23 +0600
+ -- Andrey Rahmatullin <wrar@wrar.name>  Tue, 21 Dec 2010 22:20:22 +0500
