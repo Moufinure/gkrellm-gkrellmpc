@@ -1,0 +1,24 @@
+Description: Link against gtk+-2.0 libs and fix flag order for --as-needed
+Author: Andrey Rahmatullin <wrar@wrar.name>
+Origin: vendor, http://git.altlinux.org/people/wrar/packages/gkrellm-gkrellmpc.git?f=gkrellmpc-0.1_beta10-alt-makefile-fixes.patch;h=6e740355
+Last-Update: 2010-12-18
+
+--- a/Makefile
++++ b/Makefile
+@@ -11,14 +11,14 @@
+ ifeq ($(enable_nls),1)
+ 	CFLAGS += -DENABLE_NLS
+ endif
+-LDFLAGS += `curl-config --libs`
++LDFLAGS += `pkg-config gtk+-2.0 --libs` `curl-config --libs`
+ 
+ .PHONY: all clean dist install install_lib install_local_lib install_home install_instructions deinstall uninstall test strip
+ 
+ all: gkrellmpc.so
+ 
+ gkrellmpc.so: $(OBJECTS)
+-	$(CC) $(CFLAGS) $(LDFLAGS) -shared -o gkrellmpc.so $(OBJECTS)
++	$(CC) $(CFLAGS) -shared -o gkrellmpc.so $(OBJECTS) $(LDFLAGS)
+ ifeq ($(enable_nls),1)
+ 	(cd po && ${MAKE} all)
+ endif

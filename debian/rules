@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+export LDFLAGS=-Wl,--as-needed
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	dh_auto_build -- enable_nls=1
+
+override_dh_auto_install:
+	dh_auto_install -- enable_nls=1
+
+override_dh_auto_test:

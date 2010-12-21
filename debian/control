@@ -1,0 +1,16 @@
+Source: gkrellm-gkrellmpc
+Section: sound
+Priority: optional
+Maintainer: Andrey Rahmatullin <wrar@wrar.name>
+Build-Depends: debhelper (>= 8), libcurl4-gnutls-dev, gkrellm (>= 2.0.0), libgtk2.0-dev, pkg-config
+Standards-Version: 3.9.1
+Homepage: http://mpd.wikia.com/wiki/Client:GKrellMPC
+#Vcs-Git: git://git.debian.org/collab-maint/gkrellm-gkrellmpc.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/gkrellm-gkrellmpc.git;a=summary
+
+Package: gkrellm-gkrellmpc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, gkrellm (>= 2.0.0)
+Description: GKrellM plugin for controlling MPD
+ This GKrellM plugin works as a client for Music Player Daemon (MPD). It shows
+ the current song and allows to control the playback and change the playlist.

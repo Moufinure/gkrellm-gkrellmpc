@@ -1,0 +1,4 @@
+fix-makefile-install.patch
+fix-link.patch
+fix-fd-leak.patch
+fix-memleaks.patch
