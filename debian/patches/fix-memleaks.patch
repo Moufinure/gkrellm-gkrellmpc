@@ -1,6 +1,6 @@
 Description: Fix memory leaks in mpc_mpd_get()
 Author: Andrey Rahmatullin <wrar@wrar.name>
-Origin: vendor, http://git.altlinux.org/people/wrar/packages/gkrellm-gkrellmpc.git?f=gkrellmpc-0.1_beta10-alt-memleaks-fixes.patch;h=0c9b7d5b\
+Origin: vendor, http://git.altlinux.org/people/wrar/packages/gkrellm-gkrellmpc.git?f=gkrellmpc-0.1_beta10-alt-memleaks-fixes.patch;h=0c9b7d5b
 Last-Update: 2010-12-18
 
 --- a/mpd.c
