@@ -1,3 +1,10 @@
+gkrellm-gkrellmpc (0.1~beta10-2) unstable; urgency=low
+
+  * Upload to unstable
+  * Change maintainer to pkg-mpd team
+
+ -- Andrey Rahmatullin <wrar@wrar.name>  Sun, 20 Feb 2011 19:06:55 +0500
+
 gkrellm-gkrellmpc (0.1~beta10-1) experimental; urgency=low
 
   * Initial release (Closes: #607445)
