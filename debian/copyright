@@ -1,16 +1,18 @@
-Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
-Name: GKrellMPC
-Maintainer: Andrey Rahmatullin <wrar@wrar.name>
+Format: http://dep.debian.net/deps/dep5/
+Upstream-Name: GKrellMPC
+Upstream-Contact: Mina Naguib <webmaster@topfx.com>
 Source: http://mpd.wikia.com/wiki/Client:GKrellMPC
 
+Files: *
 Copyright: 2004-2005, Mina Naguib <webmaster@topfx.com>
 License: GPL-2
 
 Files: po/ru.po
 Copyright: 2005, Sergey Pinaev <dfo@antex.ru>
+License: GPL-2
 
 Files: debian/*
-Copyright: 2010, Andrey Rahmatullin <wrar@wrar.name>
+Copyright: 2010-2011, Andrey Rahmatullin <wrar@wrar.name>
 License: GPL-2
 
 License: GPL-2
