@@ -14,4 +14,5 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, gkrellm (>= 2.0.0)
 Description: GKrellM plugin for controlling MPD
  This GKrellM plugin works as a client for Music Player Daemon (MPD). It shows
- the current song and allows to control the playback and change the playlist.
+ the current song and allows one to control the playback and change the
+ playlist.
