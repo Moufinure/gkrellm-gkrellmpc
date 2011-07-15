@@ -2,8 +2,9 @@ gkrellm-gkrellmpc (0.1~beta10-2) unstable; urgency=low
 
   * Upload to unstable
   * Change maintainer to pkg-mpd team
+  * Bump Standards-Version to 3.9.2 (no change needed)
 
- -- Andrey Rahmatullin <wrar@wrar.name>  Sun, 20 Feb 2011 19:06:55 +0500
+ -- Andrey Rahmatullin <wrar@wrar.name>  Sat, 16 Jul 2011 01:03:21 +0600
 
 gkrellm-gkrellmpc (0.1~beta10-1) experimental; urgency=low
 
