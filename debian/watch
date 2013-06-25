@@ -1,0 +1,4 @@
+version=3
+opts=uversionmangle=s/_/~/ \
+  http://mina.naguib.ca/dist/gkrellmpc-(.*).tar.gz
+#  http://mpd.wikia.com/wiki/Client:GKrellMPC http://mina.naguib.ca/dist/gkrellmpc-(.*).tar.gz
