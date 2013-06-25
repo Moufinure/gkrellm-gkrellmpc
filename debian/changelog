@@ -1,3 +1,15 @@
+gkrellm-gkrellmpc (0.1~beta10-3) unstable; urgency=low
+
+  * Bump debhelper compat level to 9
+  * Bump Standards-Version to 3.9.4 (no change needed)
+  * Add debian/watch
+  * Use canonical anonscm.d.o URLs in the Vcs-* control fields
+  * Update debian/copyright format URL and copyright years
+  * Use DEB_LDFLAGS_MAINT_APPEND instead of exporting LDFLAGS in rules
+  * Use LIBS, LDFLAGS and CPPFLAGS in the Makefile properly
+
+ -- Andrey Rahmatullin <wrar@wrar.name>  Tue, 25 Jun 2013 23:31:51 +0600
+
 gkrellm-gkrellmpc (0.1~beta10-2) unstable; urgency=low
 
   * Upload to unstable
