@@ -304,8 +304,6 @@ gboolean mpc_addlist_update(void) {
 	GtkTreeIter * parentiter = NULL;
 	gint level = 0;
 	gchar * p;
-	gchar ** parts;
-	gchar ** tempparts;
 	gchar * nicename = NULL;
 
 	if (!mpc_addlist) {
@@ -353,12 +351,7 @@ gboolean mpc_addlist_update(void) {
 			}
 
 			/* Set nicename */
-			parts = g_strsplit((directory ? directory : file), "/", 0);
-			tempparts = parts;
-			while (tempparts[0]) {
-				nicename = tempparts[0];
-				tempparts++;
-			}
+			nicename = g_path_get_basename((directory ? directory : file));
 
 			/* Add new row to store */
 			gtk_tree_store_append(mpc_addlist_store, &iter, parentiter);
@@ -369,8 +362,6 @@ gboolean mpc_addlist_update(void) {
 					, MPC_ADDLIST_COLUMN_RAWNAME, (directory ? directory : file)
 					, MPC_ADDLIST_COLUMN_DISPLAYNAME, nicename
 					, -1);
-
-			g_strfreev(parts);
 
 			/* Update parentiter */
 			if (directory) {
