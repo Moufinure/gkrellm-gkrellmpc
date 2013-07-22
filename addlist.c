@@ -327,6 +327,10 @@ gboolean mpc_addlist_update(void) {
 			file = g_hash_table_lookup(hash, "file");
 			directory = g_hash_table_lookup(hash, "directory");
 
+			if (!file && ! directory) {
+				continue;
+			}
+
 			/* Update parentiter */
 			if (directory) {
 
