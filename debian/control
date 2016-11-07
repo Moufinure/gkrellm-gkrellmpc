@@ -3,7 +3,7 @@ Section: sound
 Priority: optional
 Maintainer: mpd maintainers <pkg-mpd-maintainers@lists.alioth.debian.org>
 Uploaders: Andrey Rahmatullin <wrar@debian.org>
-Build-Depends: debhelper (>= 9), libcurl4-gnutls-dev, gkrellm (>= 2.0.0), libgtk2.0-dev, pkg-config
+Build-Depends: debhelper (>= 10), libcurl4-gnutls-dev, gkrellm (>= 2.0.0), libgtk2.0-dev, pkg-config
 Standards-Version: 3.9.4
 Homepage: http://mpd.wikia.com/wiki/Client:GKrellMPC
 Vcs-Git: git://anonscm.debian.org/pkg-mpd/gkrellm-gkrellmpc.git
