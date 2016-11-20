@@ -6,8 +6,8 @@ Uploaders: Andrey Rahmatullin <wrar@debian.org>
 Build-Depends: debhelper (>= 10), libcurl4-gnutls-dev, gkrellm (>= 2.0.0), libgtk2.0-dev, pkg-config
 Standards-Version: 3.9.4
 Homepage: http://mpd.wikia.com/wiki/Client:GKrellMPC
-Vcs-Git: git://anonscm.debian.org/pkg-mpd/gkrellm-gkrellmpc.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-mpd/gkrellm-gkrellmpc.git;a=summary
+Vcs-Git: https://anonscm.debian.org/git/pkg-mpd/gkrellm-gkrellmpc.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-mpd/gkrellm-gkrellmpc.git
 
 Package: gkrellm-gkrellmpc
 Architecture: any
