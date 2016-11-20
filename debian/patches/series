@@ -2,3 +2,4 @@ fix-makefile-install.patch
 fix-makefile-flags.patch
 fix-fd-leak.patch
 fix-memleaks.patch
+fix-crash.patch
