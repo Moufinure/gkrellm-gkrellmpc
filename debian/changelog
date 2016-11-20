@@ -1,3 +1,13 @@
+gkrellm-gkrellmpc (0.1~beta10-4) unstable; urgency=medium
+
+  * Bump debhelper compat level to 10
+  * Bump Standards-Version to 3.9.8 (no change needed)
+  * Enable all hardening options
+  * Fix a crash when adding tracks
+  * Use secure Vcs-* fields
+
+ -- Andrey Rahmatullin <wrar@debian.org>  Sun, 20 Nov 2016 21:50:23 +0500
+
 gkrellm-gkrellmpc (0.1~beta10-3) unstable; urgency=low
 
   * Bump debhelper compat level to 9
