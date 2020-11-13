@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: GKrellMPC
 Upstream-Contact: Mina Naguib <webmaster@topfx.com>
 Source: http://mpd.wikia.com/wiki/Client:GKrellMPC
@@ -12,7 +12,7 @@ Copyright: 2005, Sergey Pinaev <dfo@antex.ru>
 License: GPL-2
 
 Files: debian/*
-Copyright: 2010-2016, Andrey Rahmatullin <wrar@debian.org>
+Copyright: 2010-2020, Andrey Rahmatullin <wrar@debian.org>
 License: GPL-2
 
 License: GPL-2
