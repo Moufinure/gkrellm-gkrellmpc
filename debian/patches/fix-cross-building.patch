@@ -1,0 +1,22 @@
+Description: Fix cross-building
+Author: Helmut Grohne <helmut@subdivi.de>
+Bug-Debian: https://bugs.debian.org/971056
+Last-Update: 2020-11-13
+
+--- gkrellm-gkrellmpc-0.1~beta10.orig/Makefile
++++ gkrellm-gkrellmpc-0.1~beta10/Makefile
+@@ -7,11 +7,12 @@
+ OBJECTS = gkrellmpc.o mpd.o conf.o playlist.o addlist.o url.o
+ 
+ CC ?= gcc
+-CFLAGS += -Wall -fPIC `pkg-config gtk+-2.0 --cflags` -DPACKAGE="\"gkrellmpc\""
++PKG_CONFIG ?= pkg-config
++CFLAGS += -Wall -fPIC `$(PKG_CONFIG) gtk+-2.0 --cflags` -DPACKAGE="\"gkrellmpc\""
+ ifeq ($(enable_nls),1)
+ 	CFLAGS += -DENABLE_NLS
+ endif
+-LIBS += `pkg-config gtk+-2.0 --libs` `curl-config --libs`
++LIBS += `$(PKG_CONFIG) gtk+-2.0 --libs` `curl-config --libs`
+ 
+ .PHONY: all clean dist install install_lib install_local_lib install_home install_instructions deinstall uninstall test strip
+ 

@@ -3,3 +3,4 @@ fix-makefile-flags.patch
 fix-fd-leak.patch
 fix-memleaks.patch
 fix-crash.patch
+fix-cross-building.patch
