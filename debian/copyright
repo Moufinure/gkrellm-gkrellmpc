@@ -1,7 +1,5 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: GKrellMPC
-Upstream-Contact: Mina Naguib <webmaster@topfx.com>
-Source: http://mpd.wikia.com/wiki/Client:GKrellMPC
 
 Files: *
 Copyright: 2004-2005, Mina Naguib <webmaster@topfx.com>
