@@ -1,3 +1,13 @@
+gkrellm-gkrellmpc (0.1~beta10-6) unstable; urgency=medium
+
+  * Orphan the package
+  * Remove debian/watch, the page no longer exists
+  * Remove the Homepage field, the page no longer exists either
+  * Remove the Source and Upstream-Contact copyright fields
+  * Bump Standards-Version to 4.6.0
+
+ -- Andrey Rahmatullin <wrar@debian.org>  Wed, 06 Oct 2021 21:42:57 +0500
+
 gkrellm-gkrellmpc (0.1~beta10-5) unstable; urgency=medium
 
   * Fix cross-building, patch by Helmut Grohne (Closes: #971056)
