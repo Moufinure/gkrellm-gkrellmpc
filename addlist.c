@@ -20,7 +20,14 @@ enum mpc_addlist_columns {
 	MPC_ADDLIST_COLUMN_ICON = 0
 	, MPC_ADDLIST_COLUMN_RAWNAME
 	, MPC_ADDLIST_COLUMN_DISPLAYNAME
+	, MPC_ADDLIST_COLUMN_TYPE
 	, MPC_ADDLIST_COLUMNS
+};
+
+enum mpc_addlist_type {
+	MPC_ADDLIST_TYPE_DIRECTORY = 0
+	, MPC_ADDLIST_TYPE_FILE
+	, MPC_ADDLIST_TYPE_PLAYLIST
 };
 
 /*
@@ -80,7 +87,7 @@ void mpc_addlist_create(void) {
 		/*
 		 * Create the data store
 		 */
-		mpc_addlist_store = gtk_tree_store_new(MPC_ADDLIST_COLUMNS, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING);
+		mpc_addlist_store = gtk_tree_store_new(MPC_ADDLIST_COLUMNS, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT);
 
 		/*
 		 * Create addlist tree
@@ -205,14 +212,21 @@ gint mpc_addlist_delete_event(GtkContainer *container, GtkWidget *widget, gpoint
  */
 void mpc_cb_addlist_row (GtkTreeView *tree, GtkTreePath *path, GtkTreeViewColumn *col, gpointer user_data) {
 	GtkTreeIter   iter;
-	gchar * name;
+	gchar * rawname;
 	gchar * command;
+	gint type;
 
 	if (gtk_tree_model_get_iter(GTK_TREE_MODEL(mpc_addlist_store), &iter, path)) {
 		gtk_tree_model_get(GTK_TREE_MODEL(mpc_addlist_store), &iter
-				, MPC_ADDLIST_COLUMN_RAWNAME, &name
+				, MPC_ADDLIST_COLUMN_RAWNAME, &rawname
+				, MPC_ADDLIST_COLUMN_TYPE, &type
 				, -1);
-		command = g_strdup_printf("add \"%s\"\n", name);
+
+		if (type == MPC_ADDLIST_TYPE_PLAYLIST) {
+			command = g_strdup_printf("load \"%s\"\n", rawname);
+		} else {
+			command = g_strdup_printf("add \"%s\"\n", rawname);
+		}
 		mpc_mpd_do(command);
 		g_free(command);
 	}
@@ -270,12 +284,19 @@ void mpc_cb_addlist_button_add (GtkButton *button, gpointer user_data) {
 void mpc_cb_add_foreach (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer data) {
 	gchar * rawname;
 	gchar * command;
+	gint type;
 
 	gtk_tree_model_get(GTK_TREE_MODEL(mpc_addlist_store), iter
 			, MPC_ADDLIST_COLUMN_RAWNAME, &rawname
+			, MPC_ADDLIST_COLUMN_TYPE, &type
 			, -1);
 
-	command = g_strdup_printf("add \"%s\"\n", rawname);
+	if (type == MPC_ADDLIST_TYPE_PLAYLIST) {
+		command = g_strdup_printf("load \"%s\"\n", rawname);
+	} else {
+		command = g_strdup_printf("add \"%s\"\n", rawname);
+	}
+
 	mpc_mpd_do(command);
 	g_free(command);
 
@@ -295,8 +316,8 @@ void mpc_cb_addlist_button_close (GtkButton *button, gpointer user_data) {
 gboolean mpc_addlist_update(void) {
 	GPtrArray * list;
 	GHashTable * hash;
-	gchar * file;
-	gchar * directory;
+	enum mpc_addlist_type type;
+	gchar * filename;
 	gint i;
 	GtkTreeIter iter;
 	GPtrArray * iterpath;
@@ -304,8 +325,6 @@ gboolean mpc_addlist_update(void) {
 	GtkTreeIter * parentiter = NULL;
 	gint level = 0;
 	gchar * p;
-	gchar ** parts;
-	gchar ** tempparts;
 	gchar * nicename = NULL;
 
 	if (!mpc_addlist) {
@@ -325,15 +344,21 @@ gboolean mpc_addlist_update(void) {
 		for (i=0; i < list->len; i++) {
 			hash = g_ptr_array_index(list, i);
 
-			/* Populate local vars file and directory */
-			file = g_hash_table_lookup(hash, "file");
-			directory = g_hash_table_lookup(hash, "directory");
+			if ((filename = g_hash_table_lookup(hash, "directory"))) {
+				type = MPC_ADDLIST_TYPE_DIRECTORY;
+			} else if ((filename = g_hash_table_lookup(hash, "file"))) {
+				type = MPC_ADDLIST_TYPE_FILE;
+			} else if ((filename = g_hash_table_lookup(hash, "playlist"))) {
+				type = MPC_ADDLIST_TYPE_PLAYLIST;
+			} else {
+				continue;
+			}
 
 			/* Update parentiter */
-			if (directory) {
+			if (type == MPC_ADDLIST_TYPE_DIRECTORY) {
 
 				level = 1;
-				p = directory;
+				p = filename;
 				while (*(p++)) {
 					if (*p == '/') {
 						level++;
@@ -353,27 +378,21 @@ gboolean mpc_addlist_update(void) {
 			}
 
 			/* Set nicename */
-			parts = g_strsplit((directory ? directory : file), "/", 0);
-			tempparts = parts;
-			while (tempparts[0]) {
-				nicename = tempparts[0];
-				tempparts++;
-			}
+			nicename = g_path_get_basename(filename);
 
 			/* Add new row to store */
 			gtk_tree_store_append(mpc_addlist_store, &iter, parentiter);
 
 			/* Set vars in new row */
 			gtk_tree_store_set(mpc_addlist_store, &iter
-					, MPC_ADDLIST_COLUMN_ICON, (directory ? GTK_STOCK_OPEN : GTK_STOCK_NEW)
-					, MPC_ADDLIST_COLUMN_RAWNAME, (directory ? directory : file)
+					, MPC_ADDLIST_COLUMN_ICON, (type == MPC_ADDLIST_TYPE_DIRECTORY ? GTK_STOCK_OPEN : GTK_STOCK_NEW)
+					, MPC_ADDLIST_COLUMN_RAWNAME, filename
 					, MPC_ADDLIST_COLUMN_DISPLAYNAME, nicename
+					, MPC_ADDLIST_COLUMN_TYPE, type
 					, -1);
 
-			g_strfreev(parts);
-
 			/* Update parentiter */
-			if (directory) {
+			if (type == MPC_ADDLIST_TYPE_DIRECTORY) {
 				tempiter = g_malloc(sizeof(iter));
 				memcpy(tempiter, &iter, sizeof(iter));
 				g_ptr_array_add(iterpath, tempiter);
